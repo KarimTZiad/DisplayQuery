@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifier Display</title>
+</head>
+<body>
+
+    <h1>Verifier Display</h1>
+
+    <script>
+        // Function to extract query parameters from the URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the "verifier" query parameter from the URL
+        const verifier = getQueryParam("verifier");
+
+        // Display the verifier in a paragraph element
+        const displayElement = document.createElement("p");
+        displayElement.textContent = `Verifier: ${verifier || "Not found"}`;
+
+        // Append the paragraph element to the body
+        document.body.appendChild(displayElement);
+    </script>
+
+</body>
+</html>
