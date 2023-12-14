@@ -16,10 +16,11 @@
 
         // Get the "verifier" query parameter from the URL
         const verifier = getQueryParam("oauth_verifier");
+        const code = getQueryParam("code");
 
         // Display the verifier in a paragraph element
         const displayElement = document.createElement("p");
-        displayElement.textContent = `Verifier: ${verifier || "Not found"}`;
+        displayElement.textContent = `Verifier: ${verifier || code || "Not found"}`;
 
         // Append the paragraph element to the body
         document.body.appendChild(displayElement);
